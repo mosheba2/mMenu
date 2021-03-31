@@ -39,7 +39,6 @@ RMenu:Get('combat', 'main'):SetSubtitle("Your subtitle here")------ change this 
 RMenu.Add('combat', 'weapons', RageUI.CreateSubMenu(RMenu:Get('combat','main'), "Weapon Spawner", "~b~Choose your weapon", nil, nil))
 RMenu.Add('combat', 'vehicles', RageUI.CreateSubMenu(RMenu:Get('combat','main'), "Vehicle Spawner", "~b~Select a vehicle", nil, nil))
 RMenu.Add('combat', 'teleport', RageUI.CreateSubMenu(RMenu:Get('combat','main'), "Teleporter", "~b~Select a location to teleport to", nil, nil))
-RMenu.Add('combat', 'players', RageUI.CreateSubMenu(RMenu:Get('combat','main'), "Online Players", "~b~Select a location to teleport to", nil, nil))
 
 RageUI.CreateWhile(1.0, RMenu:Get('combat', 'main'), 311, function()
     RageUI.IsVisible(RMenu:Get('combat', 'main'), true, true, true, function()
@@ -67,10 +66,6 @@ RageUI.CreateWhile(1.0, RMenu:Get('combat', 'main'), 311, function()
                     end
                 end
             end, nil)
-
-                RageUI.Button("~r~Online Players", "Select to open the teleport menu", { RightLabel = "→→→" }, true, function(Hovered, Active, Selected)
-                    if (Selected) then end
-                end, RMenu:Get('combat','players'))
 
             if Config.TeleportMenu == true then
                 RageUI.Button("~r~Teleport Menu", "Select to open the teleport menu", { RightLabel = "→→→" }, true, function(Hovered, Active, Selected)
