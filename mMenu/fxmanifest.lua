@@ -4,8 +4,8 @@ game 'gta5'
 
 
 
-name 'Mmenu'
-description 'Mmenu is a menu that can be used in a pvp servers or an other servers to spawn in weapons, vehicles and teleport!'
+name 'mMenu'
+description 'mMenu is a menu that can be used in a pvp servers or an other servers to spawn in weapons, vehicles and teleport!'
 version '1.0.0'
 
 author 'Mosheba#9696'
