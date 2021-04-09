@@ -128,6 +128,7 @@ RageUI.CreateWhile(1.0, RMenu:Get('combat', 'main'), 311, function()
                         RequestModel(GetHashKey(values.id))
                         while not HasModelLoaded(GetHashKey(values.id)) do
                             Citizen.Wait(100)
+			RequestModel(GetHashKey(values.id))							
                         end
                         local playerPed = PlayerPedId()
                         local pos = GetEntityCoords(playerPed)
